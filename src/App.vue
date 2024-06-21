@@ -1,10 +1,8 @@
 <template>
-  <h1 class="text-center">Cek</h1>
-  <compNav title="Ini title" description="iniDeskrip"></compNav>
+  <RouterView></RouterView>
 </template>
 
 <script setup>
-import compNav from './components/navbar.vue';
 import { onMounted } from 'vue';
 // const sedikit = ref(1);
 const ambildata = async () => {

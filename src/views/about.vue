@@ -1,10 +1,10 @@
 <template>
     <div>
-        Ini home
+        Ini about
     </div>
 </template>
 <script>
 export default {
-    name: 'viewHome'
+    name: 'viewAbout'
 }
 </script>
