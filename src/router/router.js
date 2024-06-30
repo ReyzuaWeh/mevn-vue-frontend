@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { cekAuth } from '../utils/auth'
 
 import loginLayout from '../layouts/login.vue'
 import mainLayout from '../layouts/main.vue'
@@ -29,9 +30,15 @@ const routes = [
         name: 'Login'
     }
 ]
-
 const router = createRouter({
     history: createWebHistory(),
     routes,
+})
+router.beforeEach((to, from, next) => {
+    if (to.name !== 'Login' && !cekAuth()) {
+        next({ name: 'Login' })
+    } else {
+        next();
+    }
 })
 export default router;

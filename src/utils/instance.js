@@ -15,9 +15,10 @@ export function auth() {
                 password: password.value
             })
         });
-        sessionStorage.setItem('isLoggedIn', JSON.stringify({
+        sessionStorage.setItem('token', JSON.stringify({
             value: true,
         }));
+        sessionStorage.removeItem('isLoggedIn');
         const jawab = await response.json();
         console.log(jawab);
         err.value = jawab.message;

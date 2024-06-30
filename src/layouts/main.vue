@@ -1,6 +1,5 @@
 <template>
     <div>
-        {{ login }}
         <compNavbar></compNavbar>
         <router-view></router-view>
     </div>
