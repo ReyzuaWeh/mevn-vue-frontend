@@ -27,18 +27,21 @@ const routes = [
     {
         path: '/login',
         component: loginLayout,
-        name: 'Login'
+        name: 'Login',
     }
-]
+];
 const router = createRouter({
     history: createWebHistory(),
     routes,
-})
+});
 router.beforeEach((to, from, next) => {
+    console.log(to.name !== 'Login');
+    console.log(cekAuth());
+    console.log(to.name !== 'Login' && !cekAuth());
     if (to.name !== 'Login' && !cekAuth()) {
         next({ name: 'Login' })
     } else {
         next();
     }
-})
+});
 export default router;

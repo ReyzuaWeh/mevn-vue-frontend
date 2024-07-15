@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.formLogin {
+    min-width: 35%;
+    max-width: 28rem;
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid rgb(113, 53, 224);
+    border-radius: 10px;
+    background-color: rgba(105, 22, 212, 0.5);
+}
