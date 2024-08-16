@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-if="dataPosts" class="flex flex-col-reverse">
+    <div class="w-full h-screen">
+        <div v-if="dataPosts" class="flex flex-col-reverse bg-neutral-200 rounded-md p-5">
             <ViewPost v-for="(post, index) in dataPosts.result" :key="index" :postingan="post" />
         </div>
     </div>

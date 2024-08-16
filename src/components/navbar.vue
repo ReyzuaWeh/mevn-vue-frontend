@@ -1,16 +1,22 @@
 <template>
     <nav class="bg-gray-800 text-zinc-300 py-5">
         <div class="flex justify-between px-3">
-            <h1 class="font-bold text-3xl">MEVN Project</h1>
+            <h1 class="font-bold text-2xl">MEVN Project</h1>
             <ul class="flex w-1/4 justify-between my-auto">
                 <li :class="{ 'focus': (route.name == 'Home') }">
-                    <router-link to="/">Home</router-link>
+                    <router-link to="/">
+                        <span class="text-sm">Home</span>
+                    </router-link>
                 </li>
                 <li :class="{ 'focus': (route.name == 'About') }">
-                    <router-link to="/about">About</router-link>
+                    <router-link to="/about">
+                        <span class="text-sm">About</span>
+                    </router-link>
                 </li>
                 <li :class="{ 'focus': (route.name == 'Contact') }">
-                    <router-link to="/about">Contact</router-link>
+                    <router-link to="/about">
+                        <span class="text-sm">Contact</span>
+                    </router-link>
                 </li>
             </ul>
         </div>
